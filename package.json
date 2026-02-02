@@ -1,5 +1,5 @@
 {
-  "name": "@wednesday/ai-agent-skills",
+  "name": "@wednesday-solutions-eng/ai-agent-skills",
   "version": "1.0.0",
   "description": "Pre-configured agent skills for Wednesday Solutions projects. Provides AI coding assistants with project-specific guidelines for code quality and design standards.",
   "keywords": [

@@ -27,35 +27,30 @@ Pre-configured agent skills for Wednesday Solutions projects. These skills provi
 
 ## Installation
 
-### Option 1: Using the install script
-
 ```bash
-# Download and extract
-curl -L https://github.com/wednesday-solutions/agent-skills/releases/latest/download/wednesday-agent-skills.tar.gz | tar -xz
-
-# Run installer
-./wednesday-agent-skills/install.sh
+npm i @wednesday-solutions-eng/ai-agent-skills
 ```
 
-### Option 2: Manual installation
+After installation, run the CLI to install skills to your project:
 
 ```bash
-# Extract to your project root
-tar -xzf wednesday-agent-skills.tar.gz
-
-# Move skills to .wednesday directory
-mkdir -p .wednesday/skills
-cp -r wednesday-agent-skills/wednesday-dev .wednesday/skills/
-cp -r wednesday-agent-skills/wednesday-design .wednesday/skills/
-
-# Clean up
-rm -rf wednesday-agent-skills
+wednesday-skills install
 ```
 
-### Option 3: Git submodule (for updates)
+### CLI Commands
 
 ```bash
-git submodule add https://github.com/wednesday-solutions/agent-skills.git .wednesday/skills
+# Install skills to current directory
+wednesday-skills install
+
+# Install skills to a specific directory
+wednesday-skills install ./my-project
+
+# List available skills
+wednesday-skills list
+
+# Show help
+wednesday-skills help
 ```
 
 ## Directory Structure After Installation
@@ -139,19 +134,12 @@ Create a `.wednesday/config.json` to override defaults:
 
 ## Updating
 
-### If installed via tarball
-
 ```bash
-# Download latest and reinstall
-curl -L https://github.com/wednesday-solutions/agent-skills/releases/latest/download/wednesday-agent-skills.tar.gz | tar -xz
-./wednesday-agent-skills/install.sh
+npm update @wednesday-solutions-eng/ai-agent-skills
+wednesday-skills install
 ```
 
-### If installed via submodule
-
-```bash
-git submodule update --remote .wednesday/skills
-```
+This will overwrite the existing skills with the latest version.
 
 ## Contributing
 
@@ -166,6 +154,7 @@ MIT License - Wednesday Solutions
 
 ## Links
 
+- [npm Package](https://www.npmjs.com/package/@wednesday-solutions-eng/ai-agent-skills)
 - [Agent Skills Specification](https://agentskills.io/specification)
 - [Wednesday Solutions](https://wednesday.is)
-- [Report Issues](https://github.com/wednesday-solutions/agent-skills/issues)
+- [Report Issues](https://github.com/wednesday-solutions/ai-agent-skills/issues)
